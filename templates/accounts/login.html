@@ -2,6 +2,24 @@
 {% load static %}
 
 {% block tittle %}Login{% endblock tittle %}
+
+{% block head %}
+    <style>
+        main{
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+    </style>
+{% endblock head %}
+    
 {% block content %}
-    <h1>Login page</h1>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Title</h4>
+            <p class="card-text">
+                {% include 'partials/Login_form.html' %}
+            </p>
+        </div>
+    </div>
 {% endblock content %}

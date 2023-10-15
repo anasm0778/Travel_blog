@@ -1,7 +1,23 @@
 {% extends 'layout/base.html' %}
 {% load static %}
-
-{% block tittle %}Create Account{% endblock tittle %}
+{% block tittle %}Login{% endblock %}
+{% block head %}
+    <style>
+        main{
+            min-height: 100vh;
+            display: grid;
+            place-items: center;
+        }
+    </style>
+{% endblock head %}
+    
 {% block content %}
-    <h1>register Page</h1>
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Travel Blog -  Create account</h4>
+            <p class="card-text">
+                {% include 'partials/register_form.html' %}
+            </p>
+        </div>
+    </div>
 {% endblock content %}
